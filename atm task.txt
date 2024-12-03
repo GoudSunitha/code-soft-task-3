@@ -1,0 +1,51 @@
+
+  
+import java.util.Scanner;  
+  
+public class Main  
+{  
+       public static void main(String args[] )  
+    {  
+         int balance = 50000;
+         int withdraw, deposit;  
+         Scanner sc = new Scanner(System.in);  
+         while(true)  
+        {  
+            System.out.println("a is Withdraw");  
+            System.out.println("b is Deposit");  
+            System.out.println("c is check Balance");  
+            System.out.println("d is EXIT");  
+            int choice = sc.nextInt();  
+            switch(choice)  
+            {  
+                case 1:  
+        System.out.print("Money enter to be withdrawn:");  
+        withdraw = sc.nextInt();  
+        if(balance >= withdraw)  
+        {  
+        balance = balance - withdraw;  
+        System.out.println("collect your money");  
+        }  
+        else  
+        {  
+        System.out.println("Insufficient Balance");  
+        }  
+        System.out.println("");  
+        break;  
+        case 2:  
+        System.out.print("Money to be deposited:");  
+        deposit = sc.nextInt();  
+        balance = balance + deposit;  
+        System.out.println("Money has been successfully depsit:");  
+        System.out.println("");  
+        break;  
+        case 3:  
+        System.out.println("Balance : "+balance);  
+        System.out.println("");  
+        break;  
+        case 4:  
+        System.exit(0);  
+            }  
+        }  
+    }  
+}
